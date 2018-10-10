@@ -1,0 +1,54 @@
+* {
+    /*border: 1px solid cyan;*/
+    color: transparent;
+}
+
+.wrapper {
+    display: grid;
+    height: 335px;
+    width: 241px;
+    overflow: hidden;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 38px repeat(5, 33px) 38px;
+    grid-template-rows: 36px;
+}
+
+.center {
+    display: grid;
+    grid-template-columns: 25px 190px 26px;
+    grid-template-rows: 262px;
+}
+
+.middle {
+    background-color: #494035;
+    display: grid;
+    padding: 4px 2px;
+    align-self: start;
+    grid-template-columns: repeat(2, 58px) 59px;
+    grid-template-rows: repeat(8, 30px);
+    grid-row-gap: 1px;
+    grid-column-gap: 5px;
+}
+
+.middle > div {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 38px repeat(5, 33px) 38px;
+    grid-template-rows: 37px;
+}
+
+.tab-top.tab-left       { background-image: url("../img/tab-top-left.png"); }
+.tab-top.tab-right      { background-image: url("../img/tab-top-right.png"); }
+.tab-bottom.tab-left    { background-image: url("../img/tab-bottom-left.png"); }
+.tab-bottom.tab-right   { background-image: url("../img/tab-bottom-right.png"); }
+.tab-top.tab-center     { background-image: url("../img/tab-top-center.png"); }
+.tab-bottom.tab-center  { background-image: url("../img/tab-bottom-center.png"); }
+
+.pillar.pillar-left     { background-image: url("../img/pillar-left.png"); }
+.pillar.pillar-right    { background-image: url("../img/pillar-right.png"); background-position: right; }
