@@ -1,6 +1,12 @@
 * {
     /*border: 1px solid cyan;*/
-    color: transparent;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: yellow;
+    text-shadow: 1px 1px #000;
 }
 
 .wrapper {
@@ -8,6 +14,18 @@
     height: 335px;
     width: 241px;
     overflow: hidden;
+    margin: 1rem;
+    position: relative;
+}
+
+.background {
+    background-color: #494035;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 220px;
+    height: 310px;
+    z-index: -10;
 }
 
 .top {
@@ -23,18 +41,14 @@
 }
 
 .middle {
-    background-color: #494035;
+    background-image: url("../img/middle.png");
     display: grid;
     padding: 4px 2px;
     align-self: start;
-    grid-template-columns: repeat(2, 58px) 59px;
-    grid-template-rows: repeat(8, 30px);
-    grid-row-gap: 1px;
-    grid-column-gap: 5px;
-}
-
-.middle > div {
-    background-color: rgba(255, 255, 255, 0.2);
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(8, 32px);
+    grid-row-gap: 0px;
+    grid-column-gap: 3px;
 }
 
 .bottom {
@@ -43,12 +57,39 @@
     grid-template-rows: 37px;
 }
 
+.panel {
+    position: relative;
+    background-image: url("../img/panel.png");
+}
+
+.total {
+    background-color: #000;
+    margin-top: 2px;
+}
+
+.boosted-level {
+    position: absolute;
+    right: 13px;
+    top: 4px;
+    text-align: center;
+    width: 20px;
+}
+
+.base-level {
+    position: absolute;
+    right: 2px;
+    top: 16px;
+    text-align: center;
+    width: 20px;
+}
+
 .tab-top.tab-left       { background-image: url("../img/tab-top-left.png"); }
 .tab-top.tab-right      { background-image: url("../img/tab-top-right.png"); }
 .tab-bottom.tab-left    { background-image: url("../img/tab-bottom-left.png"); }
 .tab-bottom.tab-right   { background-image: url("../img/tab-bottom-right.png"); }
 .tab-top.tab-center     { background-image: url("../img/tab-top-center.png"); }
+.tab-top.tab-center.active { background-image: url("../img/tab-top-active.png"); }
 .tab-bottom.tab-center  { background-image: url("../img/tab-bottom-center.png"); }
 
-.pillar.pillar-left     { background-image: url("../img/pillar-left.png"); }
-.pillar.pillar-right    { background-image: url("../img/pillar-right.png"); background-position: right; }
+.left     { background-image: url("../img/pillar-left.png"); }
+.right    { background-image: url("../img/pillar-right.png"); background-position: right; }
